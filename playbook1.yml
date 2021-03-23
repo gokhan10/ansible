@@ -1,0 +1,14 @@
+---
+- hosts: IOS_DEVICES
+  connection: local
+  gather_facts: no
+
+
+
+
+  tasks:
+    - name: Change Enable Password
+      cisco.ios.ios_config: 
+         lines:
+           - enable secret gokhan
+
